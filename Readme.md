@@ -349,6 +349,20 @@ AttributeError: myClass instance has no attribute '__superprivate'
 
 但是有点丑..format就没有这些问题.你给的第二个问题也是这样,.format好看多了.
 
+```python
+>>>"{} {}".format("hello", "world")    # 不设置指定位置，按默认顺序
+'hello world'
+ 
+>>> "{0} {1}".format("hello", "world")  # 设置指定位置
+'hello world'
+ 
+>>> "{1} {0} {1}".format("hello", "world")  # 设置指定位置
+'world hello world'
+
+>>> "{1:+.2f}, {0:+.3f}".format(-3, 12)
+'+12.00, -3.000'
+```
+
 你为什么不用它?
 
 * 不知道它(在读这个之前)
